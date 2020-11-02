@@ -29,8 +29,19 @@
   min-width: 13vw;
 }
 
-.home__headerRight > .MuiSvgIcon-root {
-  margin-right: 20px;
+.home__headerRight
+  > .MuiButtonBase-root
+  > .MuiIconButton-label
+  > .MuiSvgIcon-root {
+  margin-right: 15px;
+}
+
+.home__headerButton {
+  padding: 0 !important;
+}
+
+.home__headerAvatar {
+  border-radius: 50%;
 }
 
 .home__body {

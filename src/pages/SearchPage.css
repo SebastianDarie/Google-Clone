@@ -6,13 +6,15 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 30px;
+  padding: 20px;
 }
 
 .searchPage__logo {
   object-fit: contain;
-  height: 50px;
+  height: 30px;
   margin-right: 50px;
+  margin-top: 8px;
+  margin-left: 4px;
 }
 
 .searchPage__headerBody > .search > .search__input {
@@ -23,7 +25,7 @@
 }
 
 .searchPage__icon {
-  width: 24px;
+  width: 16px !important;
 }
 
 .searchPage__options {
@@ -69,7 +71,7 @@
 .searchPage__results {
   max-width: 650px;
   margin-top: 20px;
-  margin-left: 240px;
+  margin-left: 165px;
   margin-bottom: 100px;
 }
 

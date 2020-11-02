@@ -28,7 +28,7 @@ const SearchPage = () => {
         </Link>
 
         <div className='searchPage__headerBody'>
-          <Search hideButtons />
+          <Search hideButtons clear searchTerm={term} />
 
           <div className='searchPage__options'>
             <div className='searchPage__optionsLeft'>
@@ -60,27 +60,27 @@ const SearchPage = () => {
               </div>
 
               <div className='searchPage__option'>
-                <DescriptionIcon />
+                <DescriptionIcon className='searchPage__icon' />
                 <Link to='/news'>News</Link>
               </div>
 
               <div className='searchPage__option'>
-                <ImageIcon />
+                <ImageIcon className='searchPage__icon' />
                 <Link to='/images'>Images</Link>
               </div>
 
               <div className='searchPage__option'>
-                <LocalOfferIcon />
+                <LocalOfferIcon className='searchPage__icon' />
                 <Link to='/shopping'>shopping</Link>
               </div>
 
               <div className='searchPage__option'>
-                <RoomIcon />
+                <RoomIcon className='searchPage__icon' />
                 <Link to='/maps'>maps</Link>
               </div>
 
               <div className='searchPage__option'>
-                <MoreVertIcon />
+                <MoreVertIcon className='searchPage__icon' />
                 <Link to='/more'>more</Link>
               </div>
             </div>

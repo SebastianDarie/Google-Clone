@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { Button } from '@material-ui/core'
+import { Button, Divider, IconButton } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search'
+import ClearIcon from '@material-ui/icons/Clear'
 import { useStateValue } from '../StateProvider'
 import { actionTypes } from '../reducers/searchReducer'
 
 import './Search.css'
 
-const Search = ({ hideButtons = false }) => {
+const Search = ({ hideButtons = false, searchTerm = '', clear = false }) => {
   //eslint-disable-next-line
   const [{}, dispatch] = useStateValue()
-  const [input, setInput] = useState('')
+  const [input, setInput] = useState(searchTerm)
   const history = useHistory()
 
   const search = (e) => {
@@ -29,6 +30,16 @@ const Search = ({ hideButtons = false }) => {
       <div className='search__input'>
         <SearchIcon className='search__inputIcon' />
         <input value={input} onChange={(e) => setInput(e.target.value)} />
+        {clear ? (
+          <>
+            <IconButton onClick={() => setInput('')}>
+              <ClearIcon />
+            </IconButton>
+            <Divider orientation='vertical' flexItem />
+          </>
+        ) : (
+          ''
+        )}
         <svg
           className='search__micIcon'
           focusable='false'
